@@ -142,105 +142,105 @@ plt.xticks(rotation = (45))
 plt.title('Average Number of Characters Per Word In Inaugural Addresses')
 plt.xlabel('Year')
 plt.ylabel('Averages')
-#plt.savefig('foo.png', bbox_inches='tight')
+
 plt.figure(figsize=(8,6))
 plt.scatter(unqs.keys(), unqs.values())
 plt.xticks(rotation = (45))
 plt.title('Unique Number of Words In Inaugural Addresses')
 plt.xlabel('Year')
 plt.ylabel('Frequency of Unique Words')
-#plt.savefig('foo2.png', bbox_inches='tight')
+
 plt.figure(figsize=(8,6))
 plt.scatter(sent_avgs.keys(), sent_avgs.values())
 plt.xticks(rotation = (45))
 plt.title('Average Length of Sentences in Inaugural Addresses')
 plt.xlabel('Year')
 plt.ylabel('Averages')
-#plt.savefig('foo3.png', bbox_inches='tight')
+
 plt.figure(figsize=(8,6))
 plt.scatter(all_long_words.keys(), all_long_words.values())
 plt.xticks(rotation = (45))
 plt.title('Number of "Long Words" in Inaugural Addresses')
 plt.xlabel('Year')
 plt.ylabel('Frequency of Long Words')
-#plt.savefig('foo4.png', bbox_inches='tight')
-# #SYNTAX
 
-# a = all_dic[0]
-# for i in all_dic[1:len(all_dic)]:
-#     a += i
-# x = [i for i in a.keys()]
-# y = [round(j,3) for j in a.values()]
-# plt.figure(figsize=(8,6))
-# plt.bar(x, y)
-# plt.title("POS Tags in All Inaugural Addresses")
-# plt.xlabel("POS Tags")
-# plt.ylabel("Frequency of Tags")
-# plt.xticks(rotation=90)
+#SYNTAX
+
+a = all_dic[0]
+for i in all_dic[1:len(all_dic)]:
+    a += i
+x = [i for i in a.keys()]
+y = [round(j,3) for j in a.values()]
+plt.figure(figsize=(8,6))
+plt.bar(x, y)
+plt.title("POS Tags in All Inaugural Addresses")
+plt.xlabel("POS Tags")
+plt.ylabel("Frequency of Tags")
+plt.xticks(rotation=90)
 
 # #LEXICAL
 
-# y = [count for tag, count in norm_dic_for_all.most_common(30)]
-# x = [tag for tag, count in norm_dic_for_all.most_common(30)]
-# plt.figure(figsize=(8,6))
-# plt.bar(x, y)
-# plt.title("30 Most Common Words in All Inaugural Addresses")
-# plt.xlabel("Words")
-# plt.ylabel("Frequency of Words")
-# plt.xticks(rotation=90)
-# plt.ylim(1.0,1.1)
+y = [count for tag, count in norm_dic_for_all.most_common(30)]
+x = [tag for tag, count in norm_dic_for_all.most_common(30)]
+plt.figure(figsize=(8,6))
+plt.bar(x, y)
+plt.title("30 Most Common Words in All Inaugural Addresses")
+plt.xlabel("Words")
+plt.ylabel("Frequency of Words")
+plt.xticks(rotation=90)
+plt.ylim(1.0,1.1)
 
-# y = [count for tag, count in lex_for_each[0].most_common(30)]
-# x = [tag for tag, count in lex_for_each[0].most_common(30)]
-# plt.figure(figsize=(8,6))
-# plt.bar(x, y)
-# plt.title("30 Most Common Words in Washington's 1789 Inaugural Address")
-# plt.xlabel("Words")
-# plt.ylabel("Frequency of Words")
-# plt.xticks(rotation=90)
-# plt.ylim(1.0,1.02)
+y = [count for tag, count in lex_for_each[0].most_common(30)]
+x = [tag for tag, count in lex_for_each[0].most_common(30)]
+plt.figure(figsize=(8,6))
+plt.bar(x, y)
+plt.title("30 Most Common Words in Washington's 1789 Inaugural Address")
+plt.xlabel("Words")
+plt.ylabel("Frequency of Words")
+plt.xticks(rotation=90)
+plt.ylim(1.0,1.02)
 
-# y = [count for tag, count in lex_for_each[ids.index('1865-Lincoln.txt')].most_common(30)]
-# x = [tag for tag, count in lex_for_each[ids.index('1865-Lincoln.txt')].most_common(30)]
-# plt.figure(figsize=(8,6))
-# plt.bar(x, y)
-# plt.title("30 Most Common Words in Lincoln's 1865 Inaugural Address")
-# plt.xlabel("Words")
-# plt.ylabel("Frequency of Words")
-# plt.xticks(rotation=90)
-# plt.ylim(1.0,1.06)
+y = [count for tag, count in lex_for_each[ids.index('1865-Lincoln.txt')].most_common(30)]
+x = [tag for tag, count in lex_for_each[ids.index('1865-Lincoln.txt')].most_common(30)]
+plt.figure(figsize=(8,6))
+plt.bar(x, y)
+plt.title("30 Most Common Words in Lincoln's 1865 Inaugural Address")
+plt.xlabel("Words")
+plt.ylabel("Frequency of Words")
+plt.xticks(rotation=90)
+plt.ylim(1.0,1.06)
 
-# y = [count for tag, count in lex_for_each[ids.index('1961-Kennedy.txt')].most_common(30)]
-# x = [tag for tag, count in lex_for_each[ids.index('1961-Kennedy.txt')].most_common(30)]
-# plt.figure(figsize=(8,6))
-# plt.bar(x, y)
-# plt.title("30 Most Common Words in Kennedy's 1961 Inaugural Address")
-# plt.xlabel("Words")
-# plt.ylabel("Frequency of Words")
-# plt.xticks(rotation=90)
-# plt.ylim(1.0,1.04)
+y = [count for tag, count in lex_for_each[ids.index('1961-Kennedy.txt')].most_common(30)]
+x = [tag for tag, count in lex_for_each[ids.index('1961-Kennedy.txt')].most_common(30)]
+plt.figure(figsize=(8,6))
+plt.bar(x, y)
+plt.title("30 Most Common Words in Kennedy's 1961 Inaugural Address")
+plt.xlabel("Words")
+plt.ylabel("Frequency of Words")
+plt.xticks(rotation=90)
+plt.ylim(1.0,1.04)
 
-# y = [count for tag, count in lex_for_each[ids.index('2009-Obama.txt')].most_common(30)]
-# x = [tag for tag, count in lex_for_each[ids.index('2009-Obama.txt')].most_common(30)]
-# plt.figure(figsize=(8,6))
-# plt.bar(x, y)
-# plt.title("30 Most Common Words in Obama's 2009 Inaugural Address")
-# plt.xlabel("Words")
-# plt.ylabel("Frequency of Words")
-# plt.xticks(rotation=90)
-# plt.ylim(1.0,1.03)
+y = [count for tag, count in lex_for_each[ids.index('2009-Obama.txt')].most_common(30)]
+x = [tag for tag, count in lex_for_each[ids.index('2009-Obama.txt')].most_common(30)]
+plt.figure(figsize=(8,6))
+plt.bar(x, y)
+plt.title("30 Most Common Words in Obama's 2009 Inaugural Address")
+plt.xlabel("Words")
+plt.ylabel("Frequency of Words")
+plt.xticks(rotation=90)
+plt.ylim(1.0,1.03)
 
-# y = [count for tag, count in lex_for_each[len(ids)-1].most_common(30)]
-# x = [tag for tag, count in lex_for_each[len(ids)-1].most_common(30)]
-# plt.figure(figsize=(8,6))
-# plt.bar(x, y)
-# plt.title("30 Most Common Words in Trump's 2017 Inaugural Address")
-# plt.xlabel("Words")
-# plt.ylabel("Frequency of Words")
-# plt.xticks(rotation=90)
-# plt.ylim(1.0,1.06)
+y = [count for tag, count in lex_for_each[len(ids)-1].most_common(30)]
+x = [tag for tag, count in lex_for_each[len(ids)-1].most_common(30)]
+plt.figure(figsize=(8,6))
+plt.bar(x, y)
+plt.title("30 Most Common Words in Trump's 2017 Inaugural Address")
+plt.xlabel("Words")
+plt.ylabel("Frequency of Words")
+plt.xticks(rotation=90)
+plt.ylim(1.0,1.06)
 
-#plt.show()
+plt.show()
 
 
 
